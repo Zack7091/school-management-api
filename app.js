@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
 app.use('/', schoolRoutes);
 
 // Server start
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000; // Fallback to 10000 for local development if no environment variable is set
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 
